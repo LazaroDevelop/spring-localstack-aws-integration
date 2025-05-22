@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: localstack-aws-integration
+
+  cloud:
+    aws:
+      credentials:
+        access-key: ${ACCESS_KEY:}
+        secret-key: ${SECRET_KEY}
+      region:
+        static: ${REGION_KEY}
