@@ -9,3 +9,7 @@ spring:
         secret-key: ${SECRET_KEY}
       region:
         static: ${REGION_KEY}
+
+
+info:
+  topic: ${TOPIC_NAME:my-topic}
