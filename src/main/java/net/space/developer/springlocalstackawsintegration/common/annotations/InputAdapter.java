@@ -1,0 +1,12 @@
+package net.space.developer.springlocalstackawsintegration.common.annotations;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import java.lang.annotation.*;
+
+
+@Documented
+@RestController
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface InputAdapter {}
