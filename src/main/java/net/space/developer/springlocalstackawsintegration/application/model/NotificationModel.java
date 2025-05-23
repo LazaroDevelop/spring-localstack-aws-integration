@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import net.space.developer.springlocalstackawsintegration.common.annotations.CustomComponent;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import static net.space.developer.springlocalstackawsintegration.common.constants.ApplicationConstants.SNS_TOPIC_PREFIX;
+
 /**
  * Notification model class
  * Using configuration properties to read attributes from application.yml
@@ -18,7 +20,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @CustomComponent
 @NoArgsConstructor
 @AllArgsConstructor
-@ConfigurationProperties(prefix = "info")
+@ConfigurationProperties(prefix = SNS_TOPIC_PREFIX)
 public class NotificationModel {
     private String topic;
 }
