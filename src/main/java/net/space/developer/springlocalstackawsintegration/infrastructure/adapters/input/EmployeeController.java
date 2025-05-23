@@ -7,6 +7,7 @@ import net.space.developer.springlocalstackawsintegration.common.annotations.Inp
 import net.space.developer.springlocalstackawsintegration.domain.models.Employee;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 2025-05-23
  */
 
+@CrossOrigin
 @InputAdapter
 @RequiredArgsConstructor
 @RequestMapping("/v1/api/employee")
