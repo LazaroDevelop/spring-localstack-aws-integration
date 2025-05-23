@@ -6,6 +6,14 @@ import lombok.NoArgsConstructor;
 import net.space.developer.springlocalstackawsintegration.common.annotations.CustomComponent;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/**
+ * Notification model class
+ * Using configuration properties to read attributes from application.yml
+ *
+ * @author Lazaro Noel Guerra Medina
+ * @since 2025-05-23
+ */
+
 @Data
 @CustomComponent
 @NoArgsConstructor
