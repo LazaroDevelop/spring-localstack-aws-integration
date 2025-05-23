@@ -1,15 +1,22 @@
 spring:
+  profiles:
+    active: dev
   application:
     name: localstack-aws-integration
 
   cloud:
     aws:
+      sns:
+        endpoint: ${SNS_ENDPOINT:http://localhost:4566/arn:aws:sqs:us-east-1:000000000000:my-queue}
+        region: ${REGION_KEY:us-east-1}
+        enabled: true
       credentials:
-        access-key: ${ACCESS_KEY:}
-        secret-key: ${SECRET_KEY}
-      region:
-        static: ${REGION_KEY}
+        secret-key: ${SECRET_KEY:test-secret}
+        access-key: ${ACCESS_KEY:test-key}
 
 
 info:
-  topic: ${TOPIC_NAME:my-topic}
+  topic: ${TOPIC_NAME:arn:aws:sns:us-east-1:000000000000:my-topic}
+
+server:
+  port: ${PORT:8090}
