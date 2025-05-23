@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import static net.space.developer.springlocalstackawsintegration.common.constants.ApplicationConstants.CONTROLLER_MAPPING;
+import static net.space.developer.springlocalstackawsintegration.common.constants.ApplicationConstants.SEND_ENDPOINT_ROUTE;
+
 /**
  * Employee Controller class to manage all the endpoints
  *
@@ -22,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @CrossOrigin
 @InputAdapter
 @RequiredArgsConstructor
-@RequestMapping("/v1/api/employee")
+@RequestMapping(CONTROLLER_MAPPING)
 public class EmployeeController {
 
     /**
@@ -36,7 +39,7 @@ public class EmployeeController {
      * @param employee an instance of {@link Employee} with all the information
      * @return a {@link ResponseEntity} with response information
      */
-    @PostMapping("/send")
+    @PostMapping(SEND_ENDPOINT_ROUTE)
     public ResponseEntity<Employee> sendEmployeeInformation(@RequestBody final Employee employee) {
 
         employeeUseCase.sendEmployeeInfo(employee);

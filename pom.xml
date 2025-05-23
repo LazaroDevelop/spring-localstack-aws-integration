@@ -54,6 +54,13 @@
             <artifactId>spring-cloud-aws-starter-sns</artifactId>
         </dependency>
 
+        <!--   AWS Simple Queue Service     -->
+        <dependency>
+            <groupId>io.awspring.cloud</groupId>
+            <artifactId>spring-cloud-aws-starter-sqs</artifactId>
+        </dependency>
+
+
 
         <!--   Lombok Annotations     -->
         <dependency>

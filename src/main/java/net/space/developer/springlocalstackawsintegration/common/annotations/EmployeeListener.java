@@ -1,18 +1,19 @@
 package net.space.developer.springlocalstackawsintegration.common.annotations;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 import java.lang.annotation.*;
 
 /**
- * Custom @RestController stereotype annotation
+ * Custom @Service stereotype annotation
  *
  * @author Lazaro Noel Guerra Medina
  * @since 2025-05-23
  */
 
+@Service
 @Documented
-@RestController
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface InputAdapter {}
+public @interface EmployeeListener {
+}
